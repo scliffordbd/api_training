@@ -1,0 +1,18 @@
+version: "3.5"
+services:
+  rfid-door-opener:
+    image: rfid-door-opener:l4t
+    network_mode: host
+    platform: linux
+    restart: unless-stopped
+    volumes:
+      # Mount payload credentials.
+      - /opt/payload_credentials/payload_guid_and_secret:/opt/payload_credentials/payload_guid_and_secret
+    # The command below is partial because the docker image is already configured with an entrypoint.
+    # command: 192.168.50.3 --payload-credentials-file /opt/payload_credentials/payload_guid_and_secret
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]

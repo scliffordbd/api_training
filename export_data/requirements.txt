@@ -1,0 +1,8 @@
+-f ../../spot-sdk/prebuilt
+bosdyn-scout==3.3.2
+boto3
+matplotlib
+numpy
+Pillow
+requests
+urllib3

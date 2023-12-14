@@ -1,0 +1,6 @@
+{
+  "description": "RFID Door Opener",
+  "version": "3.3.2",
+  "icon": "icon.png",
+  "images": ["rfid-door-opener.tar.gz"]
+}
